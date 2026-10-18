@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Between The Silence</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Between The Silence — creative representation, music releases, music services and experiential work. Los Angeles.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Between The Silence">
+<meta property="og:title" content="Between The Silence">
+<meta property="og:description" content="Creative representation, music releases, music services and experiential work. Los Angeles.">
+<meta property="og:url" content="https://betweenthesilence.com/">
+<meta property="og:image" content="https://betweenthesilence.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Between The Silence wordmark in lime beside a cream wireframe torus on slate">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,600&display=swap">
+<style>
+  /* Layout: a Swiss poster opening (wide-tracked cyan line, rule, rings top right, wireframe torus, huge lime lowercase title, tracked catalogue line), then the same grid for the details. Colours and type taken from the We Ready (BTS013) cover file. */
+  :root {
+    --bg: #393f45;        /* cover slate */
+    --cream: #f3e7cc;     /* torus + catalogue line */
+    --cyan: #41e2e0;      /* artist line */
+    --lime: #dcdd4b;      /* title */
+    --rule: #777e7e;      /* rule under the top line */
+    --ring: #a3a8ab;      /* the three rings */
+    --muted: #b9b4a6;     /* body copy on slate */
+    --display: "Avenir Next", Avenir, "Nunito Sans", "Helvetica Neue", Arial, sans-serif;
+    color-scheme: dark;
+  }
+  html, body { overflow-x: clip; }
+  body { background: var(--bg); color: var(--cream); font-family: var(--display); font-size: 17px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+
+  .wrap {
+    max-width: 1120px; margin: 0 auto; box-sizing: border-box;
+    padding-left: max(24px, env(safe-area-inset-left, 0px));
+    padding-right: max(24px, env(safe-area-inset-right, 0px));
+  }
+
+  /* Poster */
+  .poster { position: relative; padding-block: clamp(36px, 6vw, 72px) clamp(28px, 4vw, 48px); }
+  .topline { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-bottom: clamp(16px, 2.4vw, 26px); border-bottom: 3px solid var(--rule); position: relative; z-index: 2; }
+  .kicker { margin: 0; font-weight: 600; color: var(--cyan); text-transform: uppercase; letter-spacing: 0.14em; font-size: clamp(13px, 1.6vw, 16px); line-height: 1.2; }
+  .rings { height: clamp(18px, 2.2vw, 26px); width: auto; flex: none; }
+  .rings circle { stroke: var(--lime); stroke-width: 3; fill: none; }
+  .rings circle.filled { fill: var(--lime); }
+
+  .stage { position: relative; aspect-ratio: 1120 / 840; margin-bottom: 23%; }
+  .torus { position: absolute; left: -1%; top: -6%; width: 112%; max-width: none; height: auto; z-index: 1; pointer-events: none; }
+  .title {
+    position: absolute; left: 0; bottom: var(--title-drop, -26%); z-index: 2; margin: 0;
+    width: 90%; display: flex; align-items: flex-end; gap: 1.6%;
+  }
+  .title .wm { display: block; width: 77.8%; aspect-ratio: 750 / 201; background: var(--lime);
+    -webkit-mask: url("bts-wordmark.png") left bottom / contain no-repeat;
+    mask: url("bts-wordmark.png") left bottom / contain no-repeat; }
+  .title .rg { display: block; width: 20.4%; height: auto; margin-bottom: 0.3%; }
+  .title .rg circle { stroke: var(--lime); stroke-width: 3; fill: none; }
+  .title .rg circle.filled { fill: var(--lime); }
+  .catline { position: relative; z-index: 2; margin: clamp(22px, 3vw, 36px) 0 0; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; font-size: 12px; color: var(--cream); }
+
+  /* Details */
+  .details { display: grid; gap: clamp(44px, 6vw, 72px); padding-block: clamp(40px, 6vw, 72px) 40px; }
+  .label { margin: 0 0 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; font-size: 12px; color: var(--cyan); }
+  .areas { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; border-top: 3px solid var(--rule); padding-top: 24px; }
+  .area { display: grid; gap: 8px; align-content: start; }
+  .area h2 { margin: 0; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; font-size: 12px; color: var(--cyan); }
+  .area .name { margin: 0; font-weight: 400; font-size: 19px; color: var(--lime); }
+  .area p { margin: 0; color: var(--muted); font-size: 15px; }
+
+  .contact { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; border-top: 3px solid var(--rule); padding-top: 24px; }
+  .contact .who { margin: 0; font-size: 15px; color: var(--muted); }
+  .email-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 6px; }
+  .email { font-weight: 400; font-size: clamp(16px, 1.8vw, 19px); color: var(--cream); text-decoration: none; border-bottom: 1px solid var(--rule); user-select: all; overflow-wrap: anywhere; }
+  .email:hover, .email:focus-visible { border-bottom-color: var(--lime); }
+  .copy { font: 600 11px/1 var(--display); letter-spacing: 0.12em; text-transform: uppercase; color: var(--bg); background: var(--cream); border: 0; border-radius: 999px; padding: 7px 12px; cursor: pointer; }
+  .copy:hover { background: var(--lime); }
+  :focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
+
+  .clients { border-top: 3px solid var(--rule); padding-top: 24px; }
+  .clients ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 28px; }
+  .clients .logos { display: grid; grid-template-columns: repeat(auto-fill, minmax(124px, 1fr)); align-items: center; justify-items: start; gap: 28px 32px; }
+  .clients .logos li { width: 100%; display: flex; justify-content: flex-start; }
+  .clients .logo { display: block; width: min(calc(var(--h) * var(--a)), 100%); aspect-ratio: var(--a); background: var(--ring);
+    -webkit-mask: var(--src) center / contain no-repeat; mask: var(--src) center / contain no-repeat; }
+
+  footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 24px; font-size: 13px; color: var(--muted); border-top: 3px solid var(--rule); padding-top: 18px; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--cyan); }
+
+  @media (max-width: 700px) {
+    .areas, .contact { grid-template-columns: 1fr; }
+    .stage { aspect-ratio: 1 / 1.12; margin-bottom: 27%; }
+    .title { --title-drop: -16%; width: 100%; }
+    .torus { width: 150%; left: -8%; top: 0; }
+    .wrap { padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+    .poster { padding-block: 28px 24px; }
+    .kicker { font-size: 12px; letter-spacing: 0.16em; }
+    .rings { height: 16px; }
+    .details { gap: 36px; padding-block: 32px 28px; }
+    .areas { gap: 24px; padding-top: 20px; }
+    .area .name { font-size: 18px; }
+    .contact, .clients { padding-top: 20px; }
+    .email { font-size: 16px; }
+    .clients .logos { grid-template-columns: repeat(3, minmax(0, 1fr)); justify-items: center; gap: 26px 16px; }
+    .clients .logos li { justify-content: center; }
+    .clients .logo { width: min(calc(var(--h) * 0.78 * var(--a)), 100%); }
+    footer { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="poster wrap">
+  <div class="topline">
+    <p class="kicker">Creative Representation</p>
+    <svg class="rings" viewBox="0 0 136 42" aria-hidden="true"><circle cx="20" cy="21" r="18"/><circle class="filled" cx="68" cy="21" r="18"/><circle cx="116" cy="21" r="18"/></svg>
+  </div>
+  <div class="stage">
+    <img class="torus" src="torus-sm.png" alt="" width="1400" height="978">
+    <h1 class="title" role="img" aria-label="Between The Silence"><span class="wm"></span></h1>
+  </div>
+  <p class="catline">Los Angeles</p>
+</header>
+
+<main class="details wrap">
+  <section aria-label="What we do">
+    <ul class="areas">
+      <li class="area">
+        <h2>Music Releases</h2>
+        <p class="name">Between The Silence Label</p>
+        <p>Record releases, licensing and sync.</p>
+      </li>
+      <li class="area">
+        <h2>Music Services</h2>
+        <p class="name">Audio and Tactile</p>
+        <p>Sound design, tactile audio design, data sonification and visualization, brand sonification and niche genre curation.</p>
+      </li>
+      <li class="area">
+        <h2>Experiential</h2>
+        <p class="name">Sound &amp; Visual Installations</p>
+        <p>Multi-sensory music-based sound and visual experiences.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="contact" aria-label="Contact">
+    <div>
+      <p class="label">Contact</p>
+      <p class="who">Gabriela</p>
+      <div class="email-row">
+        <a class="email" href="mailto:gabriela@betweenthesilence.com">gabriela@betweenthesilence.com</a>
+        <button class="copy" type="button" id="copy-gabriela" data-email="gabriela@betweenthesilence.com">Copy</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="clients" aria-label="Selected clients">
+    <p class="label">Selected clients</p>
+    <ul class="logos">
+      <li><span class="logo" role="img" aria-label="Netflix" style="--a:3.7;--h:30px;--src:url(logos2/netflix.svg)"></span></li>
+      <li><span class="logo" role="img" aria-label="Apple TV" style="--a:1.98;--h:38px;--src:url(logos2/appletv.svg)"></span></li>
+      <li><span class="logo" role="img" aria-label="Hulu" style="--a:3.04;--h:33px;--src:url(logos2/hulu.svg)"></span></li>
+      <li><span class="logo" role="img" aria-label="Warner Bros. TV" style="--a:0.84;--h:51px;--src:url(logos2/wb.png)"></span></li>
+      <li><span class="logo" role="img" aria-label="BMG" style="--a:4.27;--h:29px;--src:url(logos2/bmg.png)"></span></li>
+      <li><span class="logo" role="img" aria-label="USA Network" style="--a:2.28;--h:36px;--src:url(logos2/usa.svg)"></span></li>
+      <li><span class="logo" role="img" aria-label="Syfy" style="--a:1.86;--h:39px;--src:url(logos2/syfy.svg)"></span></li>
+      <li><span class="logo" role="img" aria-label="Ninja Tune" style="--a:1.15;--h:46px;--src:url(logos2/ninjatune.png)"></span></li>
+      <li><span class="logo" role="img" aria-label="deadmau5" style="--a:1.12;--h:46px;--src:url(logos2/deadmau5.png)"></span></li>
+      <li><span class="logo" role="img" aria-label="Watts Prophets" style="--a:1.44;--h:42px;--src:url(logos2/wattsprophets.png)"></span></li>
+      <li><span class="logo" role="img" aria-label="FreQ Nasty" style="--a:2.11;--h:37px;--src:url(logos2/freqnasty.png)"></span></li>
+    </ul>
+  </section>
+
+  <footer>
+    <span>© 2026 Between The Silence LLC</span>
+  </footer>
+</main>
+
+<script>
+  document.querySelectorAll('.copy').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var email = btn.getAttribute('data-email');
+      var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy'; }, 1600); };
+      var fallback = function () {
+        var link = btn.parentNode.querySelector('.email');
+        var r = document.createRange(); r.selectNodeContents(link);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        btn.textContent = 'Selected';
+        setTimeout(function () { btn.textContent = 'Copy'; }, 1600);
+      };
+      try { navigator.clipboard.writeText(email).then(done, fallback); } catch (e) { fallback(); }
+    });
+  });
+</script>
+</body>
+</html>

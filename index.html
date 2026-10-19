@@ -51,10 +51,10 @@
   .rings circle { stroke: var(--lime); stroke-width: 3; fill: none; }
   .rings circle.filled { fill: var(--lime); }
 
-  .stage { position: relative; aspect-ratio: 1400 / 548; margin-top: clamp(16px, 2.2vw, 28px); margin-bottom: 23%; }
-  .torus { position: absolute; left: -0.5%; top: 0; width: 56%; max-width: none; height: auto; z-index: 1; pointer-events: none; }
+  .stage { position: relative; container-type: inline-size; }
+  .torus { position: absolute; left: var(--tx, 56cqw); top: var(--ty, -2.7cqw); width: var(--tw, 56cqw); max-width: none; height: auto; z-index: 1; pointer-events: none; }
   .title {
-    position: absolute; left: 0; bottom: var(--title-drop, -51%); z-index: 2; margin: 0;
+    position: relative; z-index: 2; margin: 0; padding-top: var(--tp, 24.4cqw);
     width: 90%; display: flex; align-items: flex-end; gap: 1.6%;
   }
   .title .wm { display: block; width: 77.8%; aspect-ratio: 750 / 201; background: var(--lime);
@@ -94,12 +94,12 @@
   footer a { color: var(--muted); text-decoration: none; }
   footer a:hover { color: var(--cyan); }
 
+  @media (max-width: 860px) { .stage { --ty: -1.7cqw; --tp: 25.8cqw; } }
   @media (max-width: 700px) {
     .areas, .contact { grid-template-columns: 1fr; }
-    .stage { aspect-ratio: 1400 / 734; margin-bottom: 30%; }
-    .title { --title-drop: -47%; width: 100%; }
-    .torus { width: 75%; left: -1%; top: 0; }
-    .wrap { padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+    .stage { --tw: 75cqw; --tx: 46cqw; --ty: -3.4cqw; --tp: 35.3cqw; }
+    .title { width: 100%; }
+        .wrap { padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
     .poster { padding-block: 28px 24px; }
     .kicker { font-size: 12px; letter-spacing: 0.16em; }
     .rings { height: 16px; }

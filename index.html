@@ -51,10 +51,10 @@
   .rings circle { stroke: var(--lime); stroke-width: 3; fill: none; }
   .rings circle.filled { fill: var(--lime); }
 
-  .stage { position: relative; aspect-ratio: 1120 / 840; margin-bottom: 23%; }
-  .torus { position: absolute; left: -1%; top: -6%; width: 112%; max-width: none; height: auto; z-index: 1; pointer-events: none; }
+  .stage { position: relative; aspect-ratio: 1400 / 548; margin-top: clamp(16px, 2.2vw, 28px); margin-bottom: 23%; }
+  .torus { position: absolute; left: -0.5%; top: 0; width: 56%; max-width: none; height: auto; z-index: 1; pointer-events: none; }
   .title {
-    position: absolute; left: 0; bottom: var(--title-drop, -26%); z-index: 2; margin: 0;
+    position: absolute; left: 0; bottom: var(--title-drop, -51%); z-index: 2; margin: 0;
     width: 90%; display: flex; align-items: flex-end; gap: 1.6%;
   }
   .title .wm { display: block; width: 77.8%; aspect-ratio: 750 / 201; background: var(--lime);
@@ -96,9 +96,9 @@
 
   @media (max-width: 700px) {
     .areas, .contact { grid-template-columns: 1fr; }
-    .stage { aspect-ratio: 1 / 1.12; margin-bottom: 27%; }
-    .title { --title-drop: -16%; width: 100%; }
-    .torus { width: 150%; left: -8%; top: 0; }
+    .stage { aspect-ratio: 1400 / 734; margin-bottom: 30%; }
+    .title { --title-drop: -47%; width: 100%; }
+    .torus { width: 75%; left: -1%; top: 0; }
     .wrap { padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
     .poster { padding-block: 28px 24px; }
     .kicker { font-size: 12px; letter-spacing: 0.16em; }

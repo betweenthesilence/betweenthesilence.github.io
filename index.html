@@ -90,6 +90,12 @@
   .clients .logo { display: block; width: min(calc(var(--h) * var(--a)), 100%); aspect-ratio: var(--a); background: var(--ring);
     -webkit-mask: var(--src) center / contain no-repeat; mask: var(--src) center / contain no-repeat; }
 
+  .area a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--rule); }
+  .area a:hover, .area a:focus-visible { color: var(--cyan); border-bottom-color: var(--cyan); }
+  .clients .logo-link { display: flex; align-items: center; gap: 12px; width: 100%; text-decoration: none; }
+  .clients .logo-link:hover .logo, .clients .logo-link:focus-visible .logo { background: var(--lime); }
+  .clients .slash { color: var(--ring); font-size: 26px; font-weight: 300; line-height: 1; }
+  .clients .logos li.pair { grid-column: span 2; }
   footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 24px; font-size: 13px; color: var(--muted); border-top: 3px solid var(--rule); padding-top: 18px; }
   footer a { color: var(--muted); text-decoration: none; }
   footer a:hover { color: var(--cyan); }
@@ -111,6 +117,7 @@
     .email { font-size: 16px; }
     .clients .logos { grid-template-columns: repeat(3, minmax(0, 1fr)); justify-items: center; gap: 26px 16px; }
     .clients .logos li { justify-content: center; }
+    .clients .logo-link { justify-content: center; }
     .clients .logo { width: min(calc(var(--h) * 0.78 * var(--a)), 100%); }
     footer { font-size: 12px; }
   }
@@ -135,12 +142,12 @@
       <li class="area">
         <h2>Representation</h2>
         <p class="name">DJ Agency</p>
-        <p>FreQ Nasty – DJ bookings worldwide.</p>
-        <p>FreQ Nasty – ‘FlightMode’ Meditation &amp; Music Workshops</p>
+        <p><a href="https://www.instagram.com/freqnasty/" target="_blank" rel="noopener">FreQ Nasty</a> – DJ bookings worldwide.</p>
+        <p>FreQ Nasty – <a href="https://docs.google.com/forms/d/e/1FAIpQLSdigPF-BrA3hkS-t9sbyR6A9TK6cCP2oqZXRbYr5cjmw8fVww/viewform" target="_blank" rel="noopener">‘FlightMode’</a> Meditation &amp; Music Workshops</p>
       </li>
       <li class="area">
         <h2>Music Releases</h2>
-        <p class="name">Between The Silence Label</p>
+        <p class="name"><a href="https://www.instagram.com/between.the.silence/" target="_blank" rel="noopener">Between The Silence Label</a></p>
         <p>Record releases, licensing and sync.</p>
       </li>
       <li class="area">
@@ -150,7 +157,7 @@
       </li>
       <li class="area">
         <h2>Experiential</h2>
-        <p class="name">Sound &amp; Visual Installations</p>
+        <p class="name"><a href="https://vimeo.com/286250015" target="_blank" rel="noopener">Sound &amp; Visual Installations</a></p>
         <p>Multi-sensory music-based sound and visual experiences.</p>
       </li>
     </ul>
@@ -170,17 +177,17 @@
   <section class="clients" aria-label="Selected clients">
     <p class="label">Selected clients</p>
     <ul class="logos">
-      <li><span class="logo" role="img" aria-label="Netflix" style="--a:3.7;--h:30px;--src:url(logos2/netflix.svg)"></span></li>
+      <li><a class="logo-link" href="https://youtu.be/BegK8MyhDf0" target="_blank" rel="noopener"><span class="logo" role="img" aria-label="Netflix" style="--a:3.7;--h:30px;--src:url(logos2/netflix.svg)"></span></a></li>
       <li><span class="logo" role="img" aria-label="Apple TV" style="--a:1.98;--h:38px;--src:url(logos2/appletv.svg)"></span></li>
-      <li><span class="logo" role="img" aria-label="Hulu" style="--a:3.04;--h:33px;--src:url(logos2/hulu.svg)"></span></li>
-      <li><span class="logo" role="img" aria-label="Warner Bros. TV" style="--a:0.84;--h:51px;--src:url(logos2/wb.png)"></span></li>
-      <li><span class="logo" role="img" aria-label="BMG" style="--a:4.27;--h:29px;--src:url(logos2/bmg.png)"></span></li>
-      <li><span class="logo" role="img" aria-label="USA Network" style="--a:2.28;--h:36px;--src:url(logos2/usa.svg)"></span></li>
-      <li><span class="logo" role="img" aria-label="Syfy" style="--a:1.86;--h:39px;--src:url(logos2/syfy.svg)"></span></li>
+      <li><a class="logo-link" href="https://www.tunefind.com/show/self-made-inspired-by-the-life-of-madam-cj-walker/season-1/96909#25031" target="_blank" rel="noopener"><span class="logo" role="img" aria-label="Hulu" style="--a:3.04;--h:33px;--src:url(logos2/hulu.svg)"></span></a></li>
+      <li><a class="logo-link" href="https://www.tunefind.com/show/black-lightning/season-2/73107" target="_blank" rel="noopener"><span class="logo" role="img" aria-label="Warner Bros. TV" style="--a:0.84;--h:51px;--src:url(logos2/wb.png)"></span></a></li>
+      <li><a class="logo-link" href="https://dai.ly/x32q0n9" target="_blank" rel="noopener"><span class="logo" role="img" aria-label="HBO" style="--a:2.43;--h:32px;--src:url(logos2/hbo.svg)"></span></a></li>
+      <li><a class="logo-link" href="https://www.allmusic.com/album/bring-me-the-head-of-freq-nasty-mw0000206114" target="_blank" rel="noopener"><span class="logo" role="img" aria-label="BMG" style="--a:4.27;--h:29px;--src:url(logos2/bmg.png)"></span></a></li>
+      <li class="pair"><a class="logo-link" aria-label="USA / Syfy" href="https://vimeo.com/286250015" target="_blank" rel="noopener"><span class="logo" role="img" aria-label="USA Network" style="--a:2.28;--h:36px;--src:url(logos2/usa.svg)"></span><span class="slash" aria-hidden="true">/</span><span class="logo" role="img" aria-label="Syfy" style="--a:1.86;--h:39px;--src:url(logos2/syfy.svg)"></span></a></li>
       <li><span class="logo" role="img" aria-label="Ninja Tune" style="--a:1.15;--h:46px;--src:url(logos2/ninjatune.png)"></span></li>
-      <li><span class="logo" role="img" aria-label="deadmau5" style="--a:1.12;--h:46px;--src:url(logos2/deadmau5.png)"></span></li>
+      <li><a class="logo-link" href="https://musictech.com/news/gear/deadmau5-subpac-m2/" target="_blank" rel="noopener"><span class="logo" role="img" aria-label="deadmau5" style="--a:1.12;--h:46px;--src:url(logos2/deadmau5.png)"></span></a></li>
       <li><span class="logo" role="img" aria-label="Watts Prophets" style="--a:1.44;--h:42px;--src:url(logos2/wattsprophets.png)"></span></li>
-      <li><span class="logo" role="img" aria-label="FreQ Nasty" style="--a:2.11;--h:37px;--src:url(logos2/freqnasty.png)"></span></li>
+      <li><a class="logo-link" href="https://www.instagram.com/freqnasty/" target="_blank" rel="noopener"><span class="logo" role="img" aria-label="FreQ Nasty" style="--a:2.11;--h:37px;--src:url(logos2/freqnasty.png)"></span></a></li>
     </ul>
   </section>
 

@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,600&display=swap">
 <style>
-  /* Layout: a Swiss poster opening (wide-tracked cyan line, rule, rings top right, wireframe torus, huge lime lowercase title, tracked catalogue line), then the same grid for the details. Colours and type taken from the We Ready (BTS013) cover file. */
+  /* Layout: a Swiss poster opening (wide-tracked cyan line, rule, wireframe torus crossing the rule, circles after "silence", huge lime lowercase title, tracked catalogue line), then the same grid for the details. Colours and type taken from the We Ready (BTS013) cover file. */
   :root {
     --bg: #393f45;        /* cover slate */
     --cream: #f3e7cc;     /* torus + catalogue line */
@@ -52,10 +52,10 @@
   .rings circle.filled { fill: var(--lime); }
 
   .stage { position: relative; container-type: inline-size; }
-  .torus { position: absolute; left: var(--tx, 60cqw); top: var(--ty, -2.8cqw); width: var(--tw, 48cqw); max-width: none; height: auto; z-index: 1; pointer-events: none; }
+  .torus { position: absolute; left: var(--tx, 64cqw); top: var(--ty, -4.4cqw); width: var(--tw, 48cqw); max-width: none; height: auto; z-index: 1; pointer-events: none; }
   .title {
-    position: relative; z-index: 2; margin: 0; padding-top: var(--tp, 10.6cqw);
-    width: 80%; display: flex; align-items: flex-end; gap: 1.6%;
+    position: relative; z-index: 2; margin: 0; padding-top: var(--tp, 11cqw);
+    width: 80%; display: flex; align-items: flex-end; gap: 3.2%;
   }
   .title .wm { display: block; width: 77.8%; aspect-ratio: 750 / 201; background: var(--lime);
     -webkit-mask: url("bts-wordmark.png") left bottom / contain no-repeat;
@@ -95,10 +95,10 @@
   footer a:hover { color: var(--cyan); }
 
   @media (max-width: 1000px) { .areas { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 28px; } }
-  @media (max-width: 860px) { .stage { --ty: -1.9cqw; --tp: 11.9cqw; } }
+  @media (max-width: 860px) { .stage { --tp: 12.1cqw; } }
   @media (max-width: 700px) {
     .areas, .contact { grid-template-columns: 1fr; }
-    .stage { --tw: 64cqw; --tx: 50cqw; --ty: -3.4cqw; --tp: 29.2cqw; }
+    .stage { --tw: 64cqw; --tx: 50cqw; --ty: max(-8.6cqw, -32px); --tp: calc(31.5cqw - 18px); }
     .title { width: 92%; }
         .wrap { padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
     .poster { padding-block: 28px 24px; }
@@ -121,11 +121,10 @@
 <header class="poster wrap">
   <div class="topline">
     <p class="kicker">Creative Representation</p>
-    <svg class="rings" viewBox="0 0 136 42" aria-hidden="true"><circle cx="20" cy="21" r="18"/><circle class="filled" cx="68" cy="21" r="18"/><circle cx="116" cy="21" r="18"/></svg>
   </div>
   <div class="stage">
     <img class="torus" src="torus-sm.png" alt="" width="1400" height="978">
-    <h1 class="title" role="img" aria-label="Between The Silence"><span class="wm"></span></h1>
+    <h1 class="title" role="img" aria-label="Between The Silence"><span class="wm"></span><svg class="rg" viewBox="0 0 136 42" aria-hidden="true"><circle cx="20" cy="21" r="18"/><circle class="filled" cx="68" cy="21" r="18"/><circle cx="116" cy="21" r="18"/></svg></h1>
   </div>
   <p class="catline">Los Angeles</p>
 </header>

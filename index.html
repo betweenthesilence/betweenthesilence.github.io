@@ -68,7 +68,7 @@
   /* Details */
   .details { display: grid; gap: clamp(44px, 6vw, 72px); padding-block: clamp(28px, 4vw, 48px) 40px; }
   .label { margin: 0 0 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; font-size: 12px; color: var(--cyan); }
-  .areas { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; border-top: 3px solid var(--rule); padding-top: 24px; }
+  .areas { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; border-top: 3px solid var(--rule); padding-top: 24px; }
   .area { display: grid; gap: 8px; align-content: start; }
   .area h2 { margin: 0; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; font-size: 12px; color: var(--cyan); }
   .area .name { margin: 0; font-weight: 400; font-size: 19px; color: var(--lime); }
@@ -94,6 +94,7 @@
   footer a { color: var(--muted); text-decoration: none; }
   footer a:hover { color: var(--cyan); }
 
+  @media (max-width: 1000px) { .areas { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 28px; } }
   @media (max-width: 860px) { .stage { --ty: -1.9cqw; --tp: 11.9cqw; } }
   @media (max-width: 700px) {
     .areas, .contact { grid-template-columns: 1fr; }
@@ -132,6 +133,12 @@
 <main class="details wrap">
   <section aria-label="What we do">
     <ul class="areas">
+      <li class="area">
+        <h2>Representation</h2>
+        <p class="name">DJ Agency</p>
+        <p>FreQ Nasty – DJ bookings worldwide.</p>
+        <p>FreQ Nasty – ‘FlightMode’ Meditation &amp; Music Workshops</p>
+      </li>
       <li class="area">
         <h2>Music Releases</h2>
         <p class="name">Between The Silence Label</p>
